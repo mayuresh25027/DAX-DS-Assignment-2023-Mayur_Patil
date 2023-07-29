@@ -6,6 +6,8 @@ ANS : SELECT CustomerId as 'Customer_Id',FirstName as 'First_Name' ,LastName as 
       FROM Customers 
       WHERE FirstName LIKE 'N%' OR City='Oslo'
 
+
+
  
 
 2.	Give me list of Tracks where unit prize range between x and y and whose composer name does not contain 'T' (Return me Track Id, Name, Composer, Unit Price) 
