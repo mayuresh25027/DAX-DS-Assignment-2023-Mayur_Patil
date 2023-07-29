@@ -10,8 +10,8 @@ ANS : SELECT CustomerId as 'Customer_Id',FirstName as 'First_Name' ,LastName as 
 
 2.	Give me list of Tracks where unit prize range between x and y and whose composer name does not contain 'T' (Return me Track Id, Name, Composer, Unit Price) 
 
--	SELECT TrackId as 'Track_ID', Name, Composer, UnitPrice as 'Unit_Price' 
-      FROM Tracks 
+-	SELECT TrackId as 'Track_ID', Name, Composer, UnitPrice as 'Unit_Price'
+      FROM Tracks
       WHERE UnitPrice BETWEEN 0.1 AND 1.0
       AND Composer NOT LIKE '%T%'
 
