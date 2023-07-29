@@ -4,7 +4,9 @@ Answers to SQL Questions
 
 ANS : 
       `SELECT CustomerId as 'Customer_Id',FirstName as 'First_Name' ,LastName as 'Last_Name' ,City
+      
       FROM Customers 
+      
       WHERE FirstName LIKE 'N%' OR City='Oslo'`
 
 
