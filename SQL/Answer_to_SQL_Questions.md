@@ -3,6 +3,7 @@ Answers to SQL Questions
 1.	Give me list of Customers whose First Name starts with N Or they Live in city xyz.  (Return me Customer Id, First name, Last Name, City) 
 
 ANS : 
+
       SELECT CustomerId as 'Customer_Id',FirstName as 'First_Name' ,LastName as 'Last_Name' ,City
       
       FROM Customers 
@@ -15,7 +16,9 @@ ANS :
 
 2.	Give me list of Tracks where unit prize range between x and y and whose composer name does not contain 'T' (Return me Track Id, Name, Composer, Unit Price) 
 
--	SELECT TrackId as 'Track_ID', Name, Composer, UnitPrice as 'Unit_Price'
+ANS:
+
+      SELECT TrackId as 'Track_ID', Name, Composer, UnitPrice as 'Unit_Price'
       FROM Tracks
       WHERE UnitPrice BETWEEN 0.1 AND 1.0
       AND Composer NOT LIKE '%T%'
@@ -23,7 +26,9 @@ ANS :
  
 3.	Calculate the sum of total Invoice bill and average of total Invoice bill for each day of month (June 2020). (Return me Invoice Date, Sum of Total bill for that day, Average of Total Bill for that day) 
 
--	SELECT InvoiceDate,SUM(Total) AS Sum_Bill, AVG(Total) AS Avg_Bill 
+ANS:
+
+      SELECT InvoiceDate,SUM(Total) AS Sum_Bill, AVG(Total) AS Avg_Bill 
       FROM Invoices 
       WHERE strftime('%Y-%m', InvoiceDate) = '2009-06' 
       GROUP BY InvoiceDate
@@ -33,7 +38,9 @@ ANS :
 
 4.	Total Quantity of Each Track ID purchased so far. Sort the Track IDs in Descending order of it’s total Count (Return me Track ID and its total Quantity) 
 
--	SELECT TrackId,SUM(Quantity) AS Sum_Quantity 
+ANS:
+
+      SELECT TrackId,SUM(Quantity) AS Sum_Quantity 
       FROM invoice_items 
       GROUP BY TrackId 
       ORDER BY Sum_Quantity desc;
@@ -42,7 +49,9 @@ ANS :
 
 5.	Give me list of Artist IDs,  whose none of the tracks are present in any Playlist. (Return Artist IDs and their names) 
 
--	SELECT * 
+ANS:
+
+      SELECT * 
       FROM Artists 
       WHERE ArtistId NOT IN (
    	      SELECT ArtistId 
@@ -60,11 +69,11 @@ ANS :
 
 6.	Give me a list of Album ID whose Tracks are present in more than 10 playlist(Return me Album ID, it's Title and the count of playlists wherein it's tracks are present)
 
--	SELECT a.AlbumId, a.Title, COUNT(c.PlaylistId) AS count_playlist 
+ANS: 
+
+      SELECT a.AlbumId, a.Title, COUNT(c.PlaylistId) AS count_playlist 
       FROM Albums a 
       INNER JOIN Tracks b ON a.AlbumId = b.AlbumId 
       INNER JOIN Playlist_track c ON b.TrackId = c.TrackId 
       GROUP BY a.AlbumId,a.Title 
       having count_playlist>10;
-
- 
