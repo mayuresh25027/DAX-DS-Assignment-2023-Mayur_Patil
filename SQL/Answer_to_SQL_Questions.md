@@ -3,7 +3,9 @@ Answers to SQL Questions
 1.	Give me list of Customers whose First Name starts with N Or they Live in city xyz.  (Return me Customer Id, First name, Last Name, City) 
 
 ANS : SELECT CustomerId as 'Customer_Id',FirstName as 'First_Name' ,LastName as 'Last_Name' ,City
+
       FROM Customers 
+
       WHERE FirstName LIKE 'N%' OR City='Oslo'
 
 
