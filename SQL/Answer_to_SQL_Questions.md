@@ -34,8 +34,8 @@ ANS:
       WHERE strftime('%Y-%m', InvoiceDate) = '2009-06' 
       GROUP BY InvoiceDate
 
- ![image](https://github.com/mayuresh25027/DAX-DS-Assignment-2023-Mayur_Patil/assets/87094130/f60e5721-4e0b-4d37-b9c8-56800f56ffa3)
 
+![image](https://github.com/mayuresh25027/DAX-DS-Assignment-2023-Mayur_Patil/assets/87094130/e699cd8b-7b7a-426b-a9e5-11404541e6a0)
 
 
 4.	Total Quantity of Each Track ID purchased so far. Sort the Track IDs in Descending order of it’s total Count (Return me Track ID and its total Quantity) 
@@ -47,7 +47,7 @@ ANS:
       GROUP BY TrackId 
       ORDER BY Sum_Quantity desc;
 
-![image](https://github.com/mayuresh25027/DAX-DS-Assignment-2023-Mayur_Patil/assets/87094130/e699cd8b-7b7a-426b-a9e5-11404541e6a0)
+ ![image](https://github.com/mayuresh25027/DAX-DS-Assignment-2023-Mayur_Patil/assets/87094130/f60e5721-4e0b-4d37-b9c8-56800f56ffa3)
 
 
 5.	Give me list of Artist IDs,  whose none of the tracks are present in any Playlist. (Return Artist IDs and their names) 
@@ -69,8 +69,8 @@ ANS:
         		)
     	);
 
- ![image](https://github.com/mayuresh25027/DAX-DS-Assignment-2023-Mayur_Patil/assets/87094130/ee680ac7-b1b3-4e9e-b4f1-c7d719ec72ee)
 
+![image](https://github.com/mayuresh25027/DAX-DS-Assignment-2023-Mayur_Patil/assets/87094130/da7aac37-3bc2-4334-bc2c-c930b848e54a)
       
 6.	Give me a list of Album ID whose Tracks are present in more than 10 playlist(Return me Album ID, it's Title and the count of playlists wherein it's tracks are present)
 
@@ -83,4 +83,4 @@ ANS:
       GROUP BY a.AlbumId,a.Title 
       having count_playlist>10;
 
-![image](https://github.com/mayuresh25027/DAX-DS-Assignment-2023-Mayur_Patil/assets/87094130/da7aac37-3bc2-4334-bc2c-c930b848e54a)
+![image](https://github.com/mayuresh25027/DAX-DS-Assignment-2023-Mayur_Patil/assets/87094130/ee680ac7-b1b3-4e9e-b4f1-c7d719ec72ee)
