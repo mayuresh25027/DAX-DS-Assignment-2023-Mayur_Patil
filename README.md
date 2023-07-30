@@ -1,6 +1,7 @@
 # DAX-DS-Assignment-2023-Mayur_Patil
 
-Model used Random forest Classifier Best Params :
+Model used Random forest Classifier 
+Best Params Random Search CV :
 `RandomForestClassifier(bootstrap=False, n_estimators=1280)`
 
 ## Test Report: 
